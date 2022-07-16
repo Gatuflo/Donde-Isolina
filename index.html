@@ -1,29 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donde Isolina</title>
-</head>
-<body>
-     
-    <header>
-        <nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-        </nav>
+    <title>Donde Isolina</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header x-data="{ open: false }" class="header">
+      <!-- Logo -->
+      <div class="header__logo">
+        <a href="./index.html"
+          ><img
+            src="./img/Captura de Pantalla 2022-06-10 a la(s) 22.51.45.png"
+            alt=""
+        /></a>
+      </div>
+      <!-- Boton abrir -->
+      <button class="header__button-nav--open" x-on:click="open = true">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <!-- Navegador -->
+      <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+        <!-- Boton cerrar -->
+        <div class="nav__button" x-on:click="open = false">
+          <button class="header__button-nav--close"><i class="fa-solid fa-xmark"></i></i>
+        </button>
+        </div>
+        <!-- Menu -->
+        <ul class="nav__ul">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Inicio</a>
+        </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Productos</a>
+        </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Empresa</a>
+        </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contacto</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Registrarse</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Fin Navegador -->
     </header>
+    <!-- Fin Header -->
 
     <main>
-
+      <div class="subcontenedor_principal">
+      <div class="caja1">
+        <a href="#" class="imagen">
+          <img src="./img/1-4.jpg" alt="">
+        </a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam beatae animi consequuntur sunt recusandae tempore, enim dolorum iure quas excepturi optio, a voluptatibus alias soluta, tempora quasi asperiores cum!</p>
+      </div>
+      <div class="caja1">2</div>
+      <div class="caja1">3</div>
+      <div class="caja1">4</div>
+      <div class="caja1">5</div>
+      <div class="caja1">6</div>
+      <div class="caja1">7</div>
+      <div class="caja1">8</div>
+      </div>
     </main>
 
     <section>
 
     </section>
+    <!-- Pie de pagina -->
+    <footer></footer>
 
-    <footer>
-
-    </footer>
-</body>
+    <!-- AlpineJS para gestionar el evento Clic -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </body>
 </html>
